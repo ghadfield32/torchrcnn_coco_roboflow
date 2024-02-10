@@ -1,3 +1,5 @@
+Collab link: https://colab.research.google.com/drive/13TfmmVpNc8EpNaUGPI7h3ZJ-b2CLR-dU#scrollTo=RHYix-Vwek-D
+
 Torch Faster R-CNN for Object Detection and Instance Segmentation
 
 Welcome to our comprehensive repository, designed to facilitate the streamlined implementation of Torch Faster R-CNN for object detection and instance segmentation with CUDA acceleration. This framework is crafted to be highly accessible, enabling both training and video processing with minimal setup, and harnesses the combined power of PyTorch, Roboflow, and CUDA for optimal performance.
