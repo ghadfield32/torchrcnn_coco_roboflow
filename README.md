@@ -21,20 +21,42 @@ Quick Start
 
     bash
 
-git clone https://github.com/ghadfield32/torchrcnn_coco_roboflow.git
-cd torchrcnn_coco_roboflow
+!git clone https://github.com/ghadfield32/torchrcnn_coco_roboflow
+
+%cd torchrcnn_coco_roboflow/
+
+!pip install -r requirements.txt
 
 Train the model with:
 
-bash
+bash 
 
-!python train.py --mode train --other_params <values>
+!python train.py --api_key api_key \
+                --workspace basketball-formations \
+                --project_name basketball-and-hoop-7xk0h \
+                --project_folder_name basketball-and-hoop \
+                --mode train 
+
+Options to add:
+                --delete_folder_and_video True \
+                --version 11 \
+                --hidden_layer 256 \
+                --lr 0.005 \
+                --num_epochs 1 \
+                --threshold 0.6 \
 
 To process a video and analyze the results, update the mode and specify the YouTube URL:
 
 bash
 
-    !python train.py --mode process_video --video_url "<YouTube URL>"
+!python train.py --mode process_video \
+    --video_url "<YouTube URL>" \
+    --video_name "Youtube video name"
+
+Options to add:
+    --delete_folder_and_video True \
+    --check_intersections True \
+    --classes_to_track Basketball Hoop \
 
 Installation
 
