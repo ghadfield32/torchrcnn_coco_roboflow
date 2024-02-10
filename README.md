@@ -29,14 +29,25 @@ Quick Start
 
 !pip install -r requirements.txt
 
+*Roboflow info get:
+1) export roboflow dataset to get:
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="api key")
+project = rf.workspace("workspace_name").project("project_name")
+dataset = project.version(11).download("coco-segmentation")
+
+^if project_name has -1234 or any numbers after the name, include that in the project_name but not in the project_folder_name
+
 Train the model with:
 
 bash 
 
 !python train.py --api_key api_key \
-                --workspace basketball-formations \
-                --project_name basketball-and-hoop-7xk0h \
-                --project_folder_name basketball-and-hoop \
+                --workspace workspace_name \
+                --project_name project_name \
+                --project_folder_name project_name_without_end \
                 --mode train 
 
 Options to add:
@@ -51,7 +62,11 @@ To process a video and analyze the results, update the mode and specify the YouT
 
 bash
 
-!python train.py --mode process_video \
+!python train.py --api_key api_key \
+    --workspace workspace_name \
+    --project_name project_name \
+    --project_folder_name project_name_without_end \
+    --mode process_video \
     --video_url "<YouTube URL>" \
     --video_name "Youtube video name"
 
