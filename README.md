@@ -30,7 +30,8 @@ bash
     !pip install -r requirements.txt
 
 - Roboflow info get:
-    1) export roboflow dataset to get:
+    Export roboflow dataset to get the code below:
+    
     !pip install roboflow
 
     from roboflow import Roboflow
@@ -39,6 +40,8 @@ bash
     dataset = project.version(11).download("coco-segmentation")
 
     ^if project_name has -1234 or any numbers after the name, include that in the project_name but not in the project_folder_name
+    ***For Example: project_name = basketball-and-hoop-7xk0h 
+                    project_folder_name = basketball-and-hoop
 
 - Train the model with:
 
